@@ -1,0 +1,9 @@
+# Find a path with Dijkstra's algorithm between
+# the same node.
+
+created graph simpleGraph
+
+added node B to simpleGraph
+
+path from B to B:
+total cost: 0.000

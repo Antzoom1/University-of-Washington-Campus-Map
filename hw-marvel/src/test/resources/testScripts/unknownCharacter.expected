@@ -1,0 +1,7 @@
+# Finds a path with one character in staffSuperHeroes dataset and one
+# unknown character
+
+loaded graph staffSuperheroes
+
+unknown: OnePunchMan
+

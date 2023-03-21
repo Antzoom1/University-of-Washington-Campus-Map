@@ -1,0 +1,16 @@
+# Tests that a singular edge can be added to a graph.
+
+# Create a graph
+created graph threeNodesGraph
+
+# Add three nodes
+added node 1 to threeNodesGraph
+added node 2 to threeNodesGraph
+added node 3 to threeNodesGraph
+
+# Add one edge
+added edge e1 from 1 to 2 in threeNodesGraph
+
+# Print the nodes in the graph and the outgoing edges from 1
+threeNodesGraph contains: 1 2 3
+the children of 1 in threeNodesGraph are: 2(e1)

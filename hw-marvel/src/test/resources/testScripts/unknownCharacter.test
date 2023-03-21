@@ -1,0 +1,6 @@
+# Finds a path with one character in staffSuperHeroes dataset and one
+# unknown character
+
+LoadGraph staffSuperheroes staffSuperheroes.csv
+
+FindPath staffSuperheroes Perkins-the-Magical-Singing-Instructor OnePunchMan

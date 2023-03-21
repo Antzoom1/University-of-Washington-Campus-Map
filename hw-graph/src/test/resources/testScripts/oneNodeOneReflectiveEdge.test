@@ -1,0 +1,14 @@
+# Tests that a singular edge that points to and from one node.
+
+# Create a graph
+CreateGraph oneNodeGraph
+
+# Add one node
+AddNode oneNodeGraph 1
+
+# Add one edge
+AddEdge oneNodeGraph 1 1 e1
+
+# Print the node in the graph and the outgoing edges from 1
+ListNodes oneNodeGraph
+ListChildren oneNodeGraph 1

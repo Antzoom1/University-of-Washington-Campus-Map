@@ -1,0 +1,10 @@
+Briefly list any changes you made to your graph class during hw-marvel, and why you made those changes.
+
+I added a getEdges method because I realized I needed to obtain the edges
+in order to build the graph and find paths. Other thanthat, I didn't change anything.
+
+Resubmission: I finally got the program to run smoothly. However, the runtime took way too long. After attending
+office hours, the ta there told me that I probably shouldn't be using 2d arrays to parse through all the code in marvel.
+I instead used a Map to build and find my paths in MarvelPaths. I also added a edge class which was really convenient
+since I was able to get the edges data a lot easier than previously with the 2d arrays. I fixed up some tests and made sure
+to pass everything this time.

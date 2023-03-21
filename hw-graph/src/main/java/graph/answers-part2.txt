@@ -1,0 +1,61 @@
+## CSE 331 hw-graph Part 2 Questions
+
+NOTE: This file is used as part of hw-graph-part2, and is not due as part of the hw-graph-part1
+submission. You may leave it blank for hw-graph-part1.
+
+## Part 1
+###########################################################################
+
+A few examples of possible Graph representations:
+
+    A: A collection of nodes and a collection of edges.
+    B: An adjacency list, in which each node is associated with a list of its outgoing edges.
+    C: An adjacency matrix, which explicitly represents, for every pair ⟨A,B⟩ of nodes, whether there 
+       is a link from A to B, and how many.
+
+1. In two or three sentences, explain an advantage and a disadvantage of each of the
+representations listed above (for example, in terms of runtime complexity, space
+complexity, or ease of implementation).
+
+The advantages for a collections of nodes and edges is that it gives a runtime complexity of 0(1) when
+adding an edge. It also was decent to understand because of my prior cse 143 knowledge. The problem is that you are
+storing 2 different data values (edge and nodes) into 2 data structures instead of one. This would make it complicated.
+For adjacent list, it would be effieiecnt when you are adding data because it runs O(1). However, the problem is that it is
+ineffictient because it is inefficient when it is querying. This is when you want to find a value. The adjacency matrix
+is good when it comes to finding data values with 0(1). However, it is bad when it comes to addind data which takes O(n^2).
+
+
+
+2. In two to three sentences, describe the representation you chose and explain why you
+chose it. If you chose to use a different representation than one of the three we described
+above, be sure to list its advantages and disadvantages, too.
+
+I chose representation A. This is because personally, this was the easiest concept to understand. I wasn't
+very familiar with maps and was more comfortable in ArrayLists. I stored the nodes in a arraylist while I stored
+the edges in a 2d ArrayList.
+
+
+
+
+## Part 4
+###########################################################################
+
+    (Please keep your answers brief and to-the-point.)
+
+1. Describe any new tests you added and why you added them, or why you feel that your original
+tests alone are sufficient.
+I did not add any new tests. I didn't add any because my tests covered all parts of my methods. This is
+especially the case because I removed some methods as well. I fixed some script tests because of some typos
+I made previously. I also fixed my Junit tests too because it also had some errors.
+
+
+
+
+2. Did you make any changes to your specifications as you were implementing your Graph? (yes/no)
+If yes, describe your changes and why you made them.
+I got rid of the getEdges method and the toString method. I felt like if the client wanted to get a edge,
+it would make no sense because the client is already making the edges with addEdge method. As for the toString,
+it isn't really necessary as of currently with the implementation because the user so far doesn't require it.
+
+
+

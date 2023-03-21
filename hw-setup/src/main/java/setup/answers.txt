@@ -1,0 +1,27 @@
+## CSE 331 hw-setup Questions
+## Part 6
+
+1. Why did Fibonacci fail the testThrowsIllegalArgumentException< test? What (if anything) did
+you have to do to fix it? If you did not have to change anything to fix this issue, explain why.
+The Fibonacci failed the testThrowsIllegalArgumentException< test because the code included zero in the condition. Since
+0 is nonnegative, this means the statement wouldn't be correct. I changed the "<=" sign to < to exclude the zero.
+
+
+
+2. Why did Fibonacci fail the testBaseCase test? What (if anything) did you have to do to fix
+it? If you did not have to change anything to fix this issue, explain why.
+The Fibonacci failed the testBaseCase test because the condition in the else if statement would include n to have 3 possible
+values (since the cat is 0, the possibilities were 0,1, and 2. This wouldn't be the case because the base case must be only
+the previous 2 values. 3 values would not be necessary. I change the code to "n <= 1" ("n < 2" works too) so that the base
+case would be correct.
+
+
+
+3.Why did Fibonacci fail the testInductiveCase test? What (if anything) did you have to do to
+fix it? If you did not have to change anything to fix this issue, explain why.
+The Fibonacci did not fail the testInductiveCase test. This is because the recursion follows the conept of Fibonacci correctly.
+What the previous 2 terms of the value currently at n would be the sum of it. The previous 2 values are adding to each other to
+produce the sum of the next value.
+
+
+

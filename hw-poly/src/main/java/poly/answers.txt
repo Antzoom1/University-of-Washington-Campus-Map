@@ -1,0 +1,84 @@
+## CSE 331 hw-poly Questions
+## Part 0
+###########################################################################
+
+1. Multiplication Pseudocode
+r = p * q
+set r = q by making a term by term copy of all the terms in q to r
+{inv: r = q * p_0 + p_1 + ... + p_i-1}
+for each term,t_p in p:
+{inv: add in later}
+for each term, t_r in r:
+since we multiply all terms,
+replace t_r in r with the product of t_p and t_r
+add all t_r in r with the add algorithm
+
+
+2. Division Pseudocode
+
+
+
+3. Division Example: (x3+x-1) / (x+1) = x2-x+2
+
+
+
+
+## Part 1
+###########################################################################
+
+1. Weakened Rep Invariant
+The constructor RatNum(int n, int d) would need to be changed. Since we don't need to keep
+the fields in reduced form anymore, we are able to remove the else statement. The following methods,
+hashcode() and equals will change as well since the spec requires the fields and ratios being
+in reduced form. Because of the reduced forms, many things change because the assumption that
+was there previously isn't anymore.
+
+
+
+2. Alternate add, sub, mul, div
+The specifications says that RatNum represents and immutable rational number. Because of this,
+the alternate statements wouldn't pass since they mutate the object.
+
+
+
+3. Constructor checkReps
+It would be enough to call checkRep only at the end of the constructors. This is because since the
+RatTerm object and the new RatTerm object returned at the end of methods cannot be modified or mutated
+according to the sepc.
+
+
+
+
+## Part 2
+###########################################################################
+
+1. Calls to checkRep in RatTerm
+I used only one call to checkRep at the end of the constructor. This is because the RatTerm object and the
+new RatTerm objects that returned at the end of the methods are not mutated according to the spec.
+
+2. One method which might difer would be the toString() method. This is because there would need to be
+another else if statement that checks if the RatTerm is zero. I would prefer the strong invariant because
+it requires less checks and concise code means efficient code.
+
+3. The constructor would be different. This is because the exponent would have to always be NaN when the
+coefficients is NaN. I would need to add a if else statement that checks if the exponents is NaN.
+I don't think this change would make too much of a difference. However, I would prefer the invariant because it is more
+consisten and could prevent cases where knowing whether expt is Nan to be useful or not.
+
+
+## Part 3
+###########################################################################
+
+1. Calls to checkRep in RatPoly
+I added calls to checkRep at the end of constructos and at the end of certain methods like
+mul() and div(). In both mehods, I created new RatPolu objects that were changed and returned
+Because of this, I had to include calls to checkRep to check on them.
+
+2. One advantage of representing a RatPoly is to access coefficients and exponents a bit
+easier since we can just use .get() to get a coefficient or exponent. One disadvantage I would face would be modifying
+terms becomes harder since we can't make use of RatTerm's methods, such as add(), sub(), mul(), or div(). This would then
+means computing polynomials to be a lot harder. This is because we would have to implement our own functions or methods. Because
+of this, representing polynomials by using a list of RatTerms is much more convenient and useful.
+
+
+

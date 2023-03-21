@@ -1,0 +1,127 @@
+## CSE 331 hw-graph Part 1 Questions
+
+## Part 1
+###########################################################################
+
+a. Write an AF and RI for IntQueue1 and IntQueue2.
+
+    ### IntQueue1
+
+    Abstraction Function:
+    AF(this) = queue Queue<Integer> so that the
+        queue = entries = [] if no elements in entries
+        queue = entries = [a1, a2, ... a_k] (k is the number of elements in entries)
+
+
+
+
+    Representation Invariant:
+    entries != null && entries contains no nulls
+
+
+
+
+    ### IntQueue2
+
+    Abstraction Function:
+    AF(this) = queue Queue<Integer> so that the
+       entries = [a1, a2, ... a_k] front = i
+       queue = empty if size == 0
+       queue = [a_(i+1), ... a_(i + size)] if the front + size <= entries
+       queue = [a_(i+1), ... a_k, a1, ... a_(k-1)] if the front + size <= entries
+
+
+
+
+    Representation Invariant:
+    size >=0 && entries != null && (front >= 0 && front <= entries - 1)
+
+
+
+
+b. Group the snapshots of IntQueue2's internal state into groups that have the same abstract state.
+queue_a = [1, 2]
+queue_b = [2, 3, 4]
+queue_c = [1, 2, 3]
+queue_d = [1, 2]
+queue_e = [1, 2, 3, 4]
+queue_f = [1, 2, 3]
+queue_g = [1, 2]
+queue_h = [2, 3, 4]
+
+queue_a, d, and g are equivalent.
+queue_c and f are equivalent.
+queue_b and h are equivalent.
+
+
+
+c. For each signature below, state and justify in 1-2 sentences (per part) whether the method or constructor
+could possibly expose the representation, given the information available. Explain any assumptions you made.
+
+    1. `public int solveEquations(int x, int y, int z)`
+    solveEquations does not contain potential representation exporsure because this method
+    only takes and returns primitive data types rather than mutable objects. The parameters,
+    x, y and z and the return type, int are all generic.
+
+
+    2. `public String[] decode(boolean slowly)`
+    This decode() method could contain potential representation exposure. This is because the return
+    type is a array of Strings and the array is mutable which means the array can change.
+
+
+
+    3. `private Date myBirthday()'
+    The method, myBirthday() contains potential representation exposure. This is true only when
+    Date is mutable and the returned Date is not a replica of the original Date.
+
+
+
+    4. `public String toString()`
+    This toString() method doesn't contain potential representation exposure. This is
+    because the return type String is immutable.
+
+
+
+    5. `public Iterator<Integer> elements()`
+    The elements() method contains representational exposure since the user can remove the
+    Integer in the collection when iterating through. The returned Iterator must
+    reference to its original collection as well.
+
+
+
+
+    6. `public Deck(List<Card> cards)`
+    This Deck method contains representation exposure because the client or user can change the cards
+    afterwards to mess up the Deck's rep invariant. This is only if the method is not a copy of the cards on the way in from the parameter.
+
+
+
+
+## Part 2
+###########################################################################
+
+Briefly explain why you included the operations you did and why you feel they are a sufficient
+interface to a graph. If your design includes multiple classes or interfaces, explain why you
+included each one; if not, explain whether you considered additional classes and why you decided
+not to include them.
+
+I felt like I needed to include adding, contains and get methods for both edges and nodes. Since the entire system is built
+on creating nodes and linking them to edges, I for sure needed to have these methods. As for the remove or isEmpty methods,
+I remember in lecture that if we are creating these nodes and edges from scratch, we actually don't need to remove any of them
+since we only add nodes and edges if certain conditions are met. I also talked to a TA and he confirmed that the remove and empty methods
+weren't exactly necessary. I had a empty constructor because we use methods to add to it and size to keep track of how many nodes are in
+the graph. Other than those, the childrenOfNode method checks the number of children nodes a certain node has. That is definitely useful when
+traversinig through nodes of the graph. Also the toString is needed to return a String version of the graph.
+
+
+
+## Part 3
+###########################################################################
+
+What was your testing strategy for this assignment? How do your script tests and JUnit tests
+differ from each other (if they do), and why?
+I used Script testings for only add methods. That way, I could see what I needed to add and then implement from there
+I used Junit tests for everything else.
+
+
+

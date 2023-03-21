@@ -1,0 +1,16 @@
+# Tests adding three nodes to the graph
+
+# Create a graph
+created graph threeNodesGraph
+
+# Add three nodes
+added node 1 to threeNodesGraph
+added node 2 to threeNodesGraph
+added node 3 to threeNodesGraph
+
+# Print the nodes in the graph, the outgoing edges from 1,
+# 2 and 3
+threeNodesGraph contains: 1 2 3
+the children of 1 in threeNodesGraph are:
+the children of 2 in threeNodesGraph are:
+the children of 3 in threeNodesGraph are:

@@ -1,0 +1,5 @@
+# Tests if a path has the same startPoint, endPoint, then it won't print anything
+
+LoadGraph staffSuperheroes staffSuperheroes.csv
+
+FindPath staffSuperheroes Grossman-the-Youngest-of-them-all Grossman-the-Youngest-of-them-all

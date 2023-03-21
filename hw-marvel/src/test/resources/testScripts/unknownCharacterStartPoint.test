@@ -1,0 +1,6 @@
+# Test to find a path from an unknown character to a character in staffSuperheroes
+
+LoadGraph staffSuperheroes staffSuperheroes.csv
+
+FindPath staffSuperheroes OnePunchMan Notkin-of-the-Superhuman-Beard
+

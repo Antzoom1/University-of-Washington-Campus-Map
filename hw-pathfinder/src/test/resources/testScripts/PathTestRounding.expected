@@ -1,0 +1,19 @@
+# Tests if the weights of the edges round
+# and if the total cost also is rounded.
+
+created graph simpleGraph
+
+added node A to simpleGraph
+added node B to simpleGraph
+added node C to simpleGraph
+added node D to simpleGraph
+
+added edge 7.335 from A to B in simpleGraph
+added edge 3.047 from A to C in simpleGraph
+added edge 2.658 from C to D in simpleGraph
+added edge 9.124 from D to B in simpleGraph
+
+path from A to D:
+A to C with weight 3.047
+C to D with weight 2.658
+total cost: 5.705

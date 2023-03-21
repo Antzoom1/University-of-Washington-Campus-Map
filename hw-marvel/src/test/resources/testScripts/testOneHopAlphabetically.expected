@@ -1,0 +1,11 @@
+# Tests the BFS on the staffSuperheroes csv file and adds nodes and edges to ensure
+# that a path with one hop can be found
+
+loaded graph staffSuperheroes
+
+added node OnePunchMan to staffSuperheroes
+added edge CSE331 from Ernst-the-Bicycling-Wizard to OnePunchMan in staffSuperheroes
+added edge CSE331 from OnePunchMan to Ernst-the-Bicycling-Wizard in staffSuperheroes
+
+path from OnePunchMan to Ernst-the-Bicycling-Wizard:
+OnePunchMan to Ernst-the-Bicycling-Wizard via CSE331

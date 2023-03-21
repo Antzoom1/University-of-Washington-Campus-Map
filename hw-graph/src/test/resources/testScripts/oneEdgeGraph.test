@@ -1,0 +1,16 @@
+# Tests that a singular edge can be added to a graph.
+
+# Create a graph
+CreateGraph threeNodesGraph
+
+# Add three nodes
+AddNode threeNodesGraph 1
+AddNode threeNodesGraph 2
+AddNode threeNodesGraph 3
+
+# Add one edge
+AddEdge threeNodesGraph 1 2 e1
+
+# Print the nodes in the graph and the outgoing edges from 1
+ListNodes threeNodesGraph
+ListChildren threeNodesGraph 1

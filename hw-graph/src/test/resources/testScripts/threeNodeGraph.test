@@ -1,0 +1,17 @@
+# Tests adding three nodes to the graph
+
+# Create a graph
+CreateGraph threeNodesGraph
+
+# Add three nodes
+AddNode threeNodesGraph 1
+AddNode threeNodesGraph 2
+AddNode threeNodesGraph 3
+
+# Print the nodes in the graph, the outgoing edges from 1,
+# 2 and 3
+ListNodes threeNodesGraph
+ListChildren threeNodesGraph 1
+ListChildren threeNodesGraph 2
+ListChildren threeNodesGraph 3
+

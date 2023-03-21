@@ -1,0 +1,5 @@
+# Tests if a path has the same startPoint, endPoint, then it won't print anything
+
+loaded graph staffSuperheroes
+
+path from Grossman-the-Youngest-of-them-all to Grossman-the-Youngest-of-them-all:

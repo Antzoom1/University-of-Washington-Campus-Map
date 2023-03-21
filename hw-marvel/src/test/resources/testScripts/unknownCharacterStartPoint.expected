@@ -1,0 +1,5 @@
+# Test to find a path from an unknown character to a character in staffSuperheroes
+
+loaded graph staffSuperheroes
+
+unknown: OnePunchMan

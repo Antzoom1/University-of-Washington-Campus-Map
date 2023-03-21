@@ -1,0 +1,14 @@
+# Tests that a singular edge that points to and from one node.
+
+# Create a graph
+created graph oneNodeGraph
+
+# Add one node
+added node 1 to oneNodeGraph
+
+# Add one edge
+added edge e1 from 1 to 1 in oneNodeGraph
+
+# Print the node in the graph and the outgoing edges from 1
+oneNodeGraph contains: 1
+the children of 1 in oneNodeGraph are: 1(e1)
